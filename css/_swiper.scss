@@ -1,0 +1,20 @@
+@import './variables';
+
+.swiper {
+	margin: 30px 0;
+
+	user-select: none;
+
+	&-slide {
+		height: 100%;
+		&__img {
+			height: 100%;
+			width: 100%;
+			aspect-ratio: 3 / 4;
+			object-fit: cover;
+		}
+	}
+	&-pagination {
+		// transform: translateY(30px);
+	}
+}
