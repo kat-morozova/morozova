@@ -42,10 +42,11 @@ function activeLinksMenu() {
 	let paths = location.href.split('/');
 	let currPath = paths[paths.length - 1];
 
-	document
-		.querySelector('.menu')
-		.querySelector(`[href='${currPath}']`)
-		.parentElement.classList.add('active');
+	// Проверяем наличие текущего url в навигации, и если такая навигация есть, то активировать ее
+	let currentActiveLink = document.querySelector('.menu').querySelector(`[href='${currPath}']`);
+	if (!!currentActiveLink) {
+		currentActiveLink.parentElement.classList.add('active');
+	}
 
 	links.forEach((link) => {
 		// let l = link.querySelector('a').getAttribute('href');

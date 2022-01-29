@@ -278,7 +278,7 @@ section#about {
 	align-items: center;
 	justify-content: center;
 	gap: 15px;
-	margin: 20px 0;
+	margin: 30px 0 45px;
 
 	.btn {
 		@include gradient-blue-anim;
@@ -523,6 +523,13 @@ section#contact {
 // ----------------------
 // ADAPTIVE
 // ----------------------
+@media (max-width: 870px) {
+	.header {
+		&__row {
+			justify-content: center;
+		}
+	}
+}
 @media (max-width: 800px) {
 	.hello {
 		flex-direction: column;
