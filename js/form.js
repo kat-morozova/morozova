@@ -26,6 +26,11 @@ function send(event, php) {
 	event.target.querySelector('button').disabled = true;
 	showMsg('Подождите. Идёт отправка сообщения', '#b1b1b1');
 	var req = new XMLHttpRequest();
+
+	req.withCredentials = true;
+	req.setRequestHeader('Content-Type', 'application/json');
+	req.setRequestHeader('referrerPolicy', 'unsafe-url');
+
 	req.open('POST', php, true);
 	req.onload = function () {
 		event.target.querySelector('button').disabled = false;
