@@ -4,6 +4,7 @@
 
 @import './variables';
 @import './buttons';
+@import './form';
 @import './swiper';
 
 * {
@@ -49,7 +50,7 @@ footer {
 }
 section {
 	padding: 20px 0;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 article {
 	padding: 20px 0;
