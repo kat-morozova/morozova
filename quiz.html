@@ -19,7 +19,7 @@
 
   <!-- Yandex.Metrika counter --> <script src="https://mc.yandex.ru/metrika/watch.js" type="text/javascript" ></script> <script type="text/javascript" > try { var yaCounter87326678 = new Ya.Metrika({ id:87326678, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } </script> <noscript><div><img src="https://mc.yandex.ru/watch/87326678" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
-  <title>Методические материалы</title>
+  <title>Проверка знаний</title>
 </head>
 <body>
 
@@ -46,38 +46,34 @@
     <!-- main -->
     <main>
       <!-- screen 1 -->
-      <section id='main' class="meta-bg">
-        <div class="cont metod">
-          <div class="title-block">
-            <h1 class="wh fz-l title-icon">Методические материалы</h1>
-          </div>
-          <article>
-            <h3 class="wh unl type-materials">Программы &#8595;</h3>
-            <div class="content">
-              <a class="content__link" href="https://cloud.mail.ru/public/oALZ/wdgL6U1Kx" target="_blank" rel='noreferrer noopener'>ПУП.01 Математика ВК</a>
-              <a class="content__link" href="https://cloud.mail.ru/public/Rwm5/N9xMTBRcS" target="_blank" rel='noreferrer noopener'>ПУП.01 Математика ИСП ВД</a>
-              <a class="content__link" href="https://cloud.mail.ru/public/1mH6/SFnKvnZ7K" target="_blank" rel='noreferrer noopener'>ПУП.01 Математика ОСА</a>
-              <a class="content__link" href="https://cloud.mail.ru/public/kiGU/yji5P2FMj" target="_blank" rel='noreferrer noopener'>ПУП.01 Математика ПОД</a>
-              <a class="content__link" href="https://cloud.mail.ru/public/CFQX/BK9HS3jL8" target="_blank" rel='noreferrer noopener'>ПУП.01 Математика ТВ</a>
-            </div>
-          </article>
-          <article >
-            <h3 class="wh unl type-materials">Методички &#8595;</h3>
-            <div class="content">
-              
-            </div>
-          </article>
-          <article >
-            <h3 class="wh unl type-materials">Кимы &#8595;</h3>
-            <div class="content">
-            </div>
-          </article>
-          <article >
-            <h3 class="wh unl type-materials">Примеры самостоятельных и контрольных работ &#8595;</h3>
-            <div class="content">
-            </div>
-          </article>
+      <section id='main'>
+        <div class="cont">
+          <h1 class="wh">Опрос "Как хорошо вы знаете Алгебру?"</h1>
           
+          <article>
+            <div class="quiz">
+              <div class="quiz__count">Вопрос 
+                <span class="count">x</span>
+                 из
+                <span class="count-length">x</span>
+              </div>
+
+              <div class="quiz__question">Вопрос?</div>
+
+              <div class="quiz__answers">
+                <!-- <label class="quiz__answer" for="1"><input id='1' type='radio' name='answer' value='1' /> Ответ 1</label>
+                <label class="quiz__answer" for="2"><input id='2' type='radio' name='answer' value='2' /> Ответ 2</label> -->
+                
+              
+              </div>
+
+              <div class="quiz__btn">
+                <button class="btn btn-primary">Далее</button>
+              </div>
+
+
+            </div> 
+          </article>
         </div>
       </section> <!-- /screen 1 -->
 
@@ -91,21 +87,8 @@
 
   <!-- <script  src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
   
-  <script>
-
-    const typesTitle = document.querySelectorAll('.type-materials')
-
-    typesTitle.forEach(title => {
-      title.addEventListener('click', openMaterials)
-    })
-
-    function openMaterials(e) {
-      const content = e.target.nextElementSibling
-      content.classList.toggle('active')
-      console.log(content.classList)
-    }
-
-  </script>
+  
   <script src='./js/help.js'></script>
+  <script src="./js/quiz.js"></script>
 </body>
 </html>

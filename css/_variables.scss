@@ -46,6 +46,21 @@ $color-title: $color-primary;
 	text-decoration: underline;
 	cursor: pointer;
 }
+.center {
+	margin: 0 auto;
+	text-align: center;
+	align-self: center;
+}
+
+@keyframes anim-gradient {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
 @mixin white-font {
 	color: $color-white;
 	text-shadow: 0 1px 4px rgba(55, 55, 77, 0.35);
@@ -54,9 +69,34 @@ $color-title: $color-primary;
 	background: rgb(13, 32, 196);
 	background: linear-gradient(28deg, rgba(13, 32, 196, 1) 0%, rgba(30, 217, 255, 1) 100%);
 }
-@mixin gradient-blue-reverse {
+@mixin gradient-blue-icons {
 	background: rgb(13, 32, 196);
-	background: linear-gradient(28deg, rgba(30, 217, 255, 1) 0%, rgba(13, 32, 196, 1) 100%);
+	background: url('../img/book-2.png') 10% 10% / 100px no-repeat,
+		linear-gradient(28deg, rgba(13, 32, 196, 1) 0%, rgba(30, 217, 255, 1) 100%);
+}
+@mixin gradient-blue-anim {
+	// @include gradient-blue;
+	// animation: anim-gradient 2s ease-in-out alternate infinite;
+	position: relative;
+	z-index: 3;
+	overflow: hidden;
+	background-color: transparent;
+	&::after {
+		content: '';
+		background: linear-gradient(45deg, rgb(8, 26, 189) 20%, rgba(30, 217, 255, 1) 80%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		box-sizing: content-box;
+		width: 120%;
+		padding: 60% 0;
+		border-radius: 50%;
+		z-index: 2;
+		transform: translate(-50%, -50%);
+		animation: anim-gradient linear 4s infinite forwards;
+	}
+	// background: rgb(13, 32, 196);
+	// background: linear-gradient(28deg, rgba(30, 217, 255, 1) 0%, rgba(13, 32, 196, 1) 100%);
 }
 @mixin circle {
 	position: relative;

@@ -3,9 +3,9 @@ const swiper = new Swiper('.swiper', {
 	direction: 'horizontal',
 	loop: true,
 	speed: 1000,
-	autoplay: {
-		delay: 1500,
-	},
+	// autoplay: {
+	// 	delay: 1500,
+	// },
 	centeredSlides: true,
 	preloadImages: true,
 	// slidesPerView: 3,

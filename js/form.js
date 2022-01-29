@@ -12,8 +12,8 @@ msg.addEventListener('click', (e) => {
 
 let _form = document.querySelector('#form');
 _form.addEventListener('submit', (e) => {
-	send(e, 'https://a0490169.xsph.ru/morozova/send');
-	// send(e, '../server/send');
+	// send(e, 'https://a0490169.xsph.ru/morozova/send');
+	send(e, './server/send');
 });
 
 let timer;

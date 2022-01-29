@@ -38,20 +38,36 @@ function menuScroll() {
 
 function activeLinksMenu() {
 	const menus = document.querySelectorAll('.menu__item');
-	const paths = location.href.split('/');
-	const currPath = paths[paths.length - 1];
+	const links = document.querySelectorAll('header .link-in');
+	let paths = location.href.split('/');
+	let currPath = paths[paths.length - 1];
 
-	menus.forEach((link) => {
-		let l = link.querySelector('a').getAttribute('href');
-		if (l === currPath) {
-			link.classList.add('active');
-		}
+	document
+		.querySelector('.menu')
+		.querySelector(`[href='${currPath}']`)
+		.parentElement.classList.add('active');
+
+	links.forEach((link) => {
+		// let l = link.querySelector('a').getAttribute('href');
 
 		link.addEventListener('click', (e) => {
 			const tar = e.target;
+			paths = location.href.split('/');
+			currPath = paths[paths.length - 1];
+			console.log(currPath);
 
-			menus.forEach((el) => el.classList.remove('active'));
-			tar.parentElement.classList.add('active');
+			menus.forEach((el) => {
+				el.classList.remove('active');
+			});
+
+			if (document.querySelector('.menu').querySelector(`[href='${currPath}']`)) {
+				console.log(document.querySelector('.menu').querySelector(`[href='${currPath}']`));
+				document
+					.querySelector('.menu')
+					.querySelector(`[href='${currPath}']`)
+					.parentElement.classList.add('active');
+			}
+			// tar.parentElement.classList.add('active');
 		});
 	});
 }

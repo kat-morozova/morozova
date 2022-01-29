@@ -1,0 +1,75 @@
+@import './variables';
+
+.quiz {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 25px;
+	border-radius: 15px;
+	border: 2px solid #aaa;
+	background-color: $color-white;
+	font-size: 18px;
+	font-weight: 500;
+
+	// sup {
+	// 	margin: -6.5px -7px 0;
+	// 	font-size: 0.75em;
+	// }
+	// sub {
+	// 	margin: 0 2px -6.5px;
+	// 	padding-right: 2px;
+	// 	font-size: 0.75em;
+	// }
+
+	&__count {
+		font-size: 16px;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__question {
+		font-weight: 700;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	&__answers {
+		padding-left: 10px;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 25px;
+
+		.quiz__answer {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			cursor: pointer;
+			padding: 3px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.quiz__answer.select {
+			position: relative;
+			&::before {
+				content: '*';
+				display: flex;
+				align-items: center;
+				position: absolute;
+				height: 100%;
+				font-size: 22px;
+				color: $color-primary;
+				text-shadow: 0 1px 3px rgba(63, 63, 96, 0.2);
+				font-weight: 700;
+				top: 50%;
+				left: -15%;
+				transform: translate(-50%, -35%);
+			}
+		}
+	}
+}

@@ -5,6 +5,7 @@
 @import './variables';
 @import './buttons';
 @import './form';
+@import './quiz';
 @import './swiper';
 
 * {
@@ -181,6 +182,7 @@ li {
 	align-items: center;
 	gap: 40px;
 	position: relative;
+	// overflow-x: hidden;
 	z-index: 2;
 	&-text {
 		display: flex;
@@ -210,6 +212,7 @@ li {
 		// background-color: rgb(134, 131, 131);
 		flex: 1 1 50%;
 		user-select: none;
+		overflow-x: hidden;
 
 		&__circle {
 			position: relative;
@@ -269,6 +272,31 @@ li {
 // экран 2
 section#about {
 	background-color: rgb(255, 255, 255);
+}
+.link-to-cloud {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	margin: 20px 0;
+
+	.btn {
+		@include gradient-blue-anim;
+
+		border-radius: 50px;
+		box-shadow: 0 0px 10px 0px rgba(60, 151, 255, 0.2);
+
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 0px 20px 0px rgba(60, 151, 255, 0.6);
+		}
+
+		span {
+			position: relative;
+			z-index: 5;
+			color: inherit;
+		}
+	}
 }
 .achievements {
 	&__list {
@@ -432,19 +460,64 @@ section#contact {
 	}
 }
 .content.active {
-	visibility: visible;
-	overflow: auto;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	gap: 10px;
+	visibility: visible;
+	overflow: auto;
 	padding: 10px;
+	padding-left: 20px;
 	margin-top: 0%;
 	opacity: 1;
 	transform: scale(1);
 	transition: all 0.5s ease-in-out;
 }
+.metod {
+	max-width: 700px;
+	h1,
+	h2,
+	h3,
+	h4 {
+		text-align: left;
+	}
 
+	.type-materials {
+		padding: 5px;
+	}
+}
+.title-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.title-icon {
+	position: relative;
+	display: inline-block;
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		background: url('../img/book-2.png') no-repeat;
+		height: 30px;
+		width: 30px;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		background-size: contain;
+	}
+	&::after {
+		right: 0;
+		transform: translate(160%, -50%);
+	}
+	&::before {
+		left: 0;
+		transform: translate(-160%, -50%);
+	}
+}
 // ///////////
 
 // ----------------------
@@ -484,12 +557,37 @@ section#contact {
 		gap: 15px;
 	}
 
+	.hello {
+		&-icons {
+			&__circle {
+				&-1 {
+					width: 330px;
+					height: 330px;
+					background-color: rgba(34, 136, 204, 0.3);
+					@include circle;
+				}
+				&-2 {
+					width: 270px;
+					height: 270px;
+					background-color: rgba(34, 136, 204, 0.4);
+					@include circle;
+				}
+				&-3 {
+					width: 190px;
+					height: 190px;
+					background-color: rgba(34, 136, 204, 0.6);
+					@include circle;
+				}
+			}
+		}
+	}
+
 	section {
 		padding: 20px 0;
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
 	.hello {
 		h1 {
 			font-size: 28px;
@@ -497,5 +595,9 @@ section#contact {
 		h2 {
 			font-size: 32px;
 		}
+	}
+	.cont {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
