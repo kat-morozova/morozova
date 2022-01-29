@@ -1,0 +1,117 @@
+$color-text: #121213;
+$color-white: #fff;
+$color-primary: rgb(30, 121, 206);
+
+$color-title: $color-primary;
+
+.mb-10 {
+	margin-bottom: 10px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.title {
+	color: $color-title;
+}
+.wh {
+	color: $color-white;
+	text-shadow: 0 1px 4px rgba(55, 55, 77, 0.35);
+}
+.bl {
+	font-weight: 900;
+}
+.fz-l {
+	font-size: 36px;
+}
+.fz-ml {
+	font-size: 32px;
+}
+.fz-m {
+	font-size: 20px;
+}
+.fz-sm {
+	font-size: 18px;
+}
+.fz-s {
+	font-size: 16px;
+}
+.fw-m {
+	font-weight: 600;
+}
+
+.crop-m {
+	width: 80%;
+}
+.unl {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.center {
+	margin: 0 auto;
+	text-align: center;
+	align-self: center;
+}
+
+@keyframes anim-gradient {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@mixin white-font {
+	color: $color-white;
+	text-shadow: 0 1px 4px rgba(55, 55, 77, 0.35);
+}
+@mixin gradient-blue {
+	background: rgb(13, 32, 196);
+	background: linear-gradient(28deg, rgba(13, 32, 196, 1) 0%, rgba(30, 217, 255, 1) 100%);
+}
+@mixin gradient-blue-icons {
+	background: rgb(13, 32, 196);
+	background: url('../img/book-2.png') 10% 10% / 100px no-repeat,
+		linear-gradient(28deg, rgba(13, 32, 196, 1) 0%, rgba(30, 217, 255, 1) 100%);
+}
+@mixin gradient-blue-anim {
+	// @include gradient-blue;
+	// animation: anim-gradient 2s ease-in-out alternate infinite;
+	position: relative;
+	z-index: 3;
+	overflow: hidden;
+	background-color: transparent;
+	&::after {
+		content: '';
+		background: linear-gradient(45deg, rgb(8, 26, 189) 20%, rgba(30, 217, 255, 1) 80%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		box-sizing: content-box;
+		width: 120%;
+		padding: 60% 0;
+		border-radius: 50%;
+		z-index: 2;
+		transform: translate(-50%, -50%);
+		animation: anim-gradient linear 4s infinite forwards;
+	}
+	// background: rgb(13, 32, 196);
+	// background: linear-gradient(28deg, rgba(30, 217, 255, 1) 0%, rgba(13, 32, 196, 1) 100%);
+}
+@mixin circle {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(1px);
+	box-shadow: 0 3px 12px rgba(55, 55, 100, 0.15), inset 3px 3px 5px rgba(255, 255, 255, 0.12);
+}
+
+@mixin glass {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(1px);
+	box-shadow: 0 3px 12px rgba(55, 55, 100, 0.15), inset 3px 3px 5px rgba(255, 255, 255, 0.12);
+}
