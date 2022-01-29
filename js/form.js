@@ -28,10 +28,10 @@ function send(event, php) {
 	var req = new XMLHttpRequest();
 
 	req.withCredentials = true;
-	req.setRequestHeader('Content-Type', 'application/json');
-	req.setRequestHeader('referrerPolicy', 'unsafe-url');
 
 	req.open('POST', php, true);
+	// req.setRequestHeader('Content-Type', 'application/json');
+	req.setRequestHeader('referrerPolicy', 'unsafe-url');
 	req.onload = function () {
 		event.target.querySelector('button').disabled = false;
 		if (req.status >= 200 && req.status < 400) {
