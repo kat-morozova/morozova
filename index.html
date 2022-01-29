@@ -26,6 +26,7 @@
 <body>
 
   <div class="wrapper">
+    <!-- <div class="parallax"> -->
     <header class="header">
       <!-- header -->
       <div class="cont header__row">
@@ -44,41 +45,42 @@
         </ul>
       </div>
     </header> <!-- </header> -->
-
-    <!-- main -->
-    <main>
-      <!-- screen 1 -->
-      <section id='main'>
-        <div class="cont">
-          <div class="hello">
-            <div class="hello-text">
-              <div class="hello-text__title">
-                <h1 class="wh">Преподаватель по математике</h1>
-                <h2 class="bl wh fz-l">Екатерина Морозова</h2>
-              </div>
-              <div class="hello-text__desc">
-                <p class="wh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum excepturi inventore beatae cumque tempora temporibus rerum ut. Labore id vero, dicta enim quibusdam consectetur ipsa! Debitis obcaecati amet natus.</p>
-              </div>
-              <div class="hello-text__btns">
-                <a class="btn btn-l btn-secondary" href="index.html#contact">Связваться со мной</a>
-                <a class="btn btn-l btn-secondary" href="#">Пройти опрос</a>
-              </div>
+    <!-- screen 1 -->
+    <section id='main'>
+      <div class="cont">
+        <div class="hello">
+          <div class="hello-text">
+            <div class="hello-text__title">
+              <h1 class="wh">Преподаватель по математике</h1>
+              <h2 class="bl wh fz-l">Екатерина Морозова</h2>
             </div>
-            <div class="hello-icons hello-icons__circle">
-              <div class="hello-icons__circle-1">
-                <div class="hello-icons__circle-2">
-                  <div class="hello-icons__circle-3">
-                    <img class="hello_icons__book hello_icons__icon" src="./img/book-2.png" alt="">
-                    <img class="hello_icons__ruler hello_icons__icon" src="./img/ruler-2.png" alt="">
-                    <img class="hello_icons__pencil hello_icons__icon" src="./img/pencil.png" alt="">
-                  </div>
+            <div class="hello-text__desc">
+              <p class="wh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum excepturi inventore beatae cumque tempora temporibus rerum ut. Labore id vero, dicta enim quibusdam consectetur ipsa! Debitis obcaecati amet natus.</p>
+            </div>
+            <div class="hello-text__btns">
+              <a class="btn btn-l btn-secondary" href="index.html#contact">Связваться со мной</a>
+              <a class="btn btn-l btn-secondary" href="#">Пройти опрос</a>
+            </div>
+          </div>
+          <div class="hello-icons hello-icons__circle">
+            <div class="hello-icons__circle-1">
+              <div class="hello-icons__circle-2">
+                <div class="hello-icons__circle-3">
+                  <img class="hello_icons__book hello_icons__icon" src="./img/book-2.png" alt="">
+                  <img class="hello_icons__ruler hello_icons__icon" src="./img/ruler-2.png" alt="">
+                  <img class="hello_icons__pencil hello_icons__icon" src="./img/pencil.png" alt="">
                 </div>
               </div>
-            </div> <!-- /hello-icons -->
-            
-          </div>
+            </div>
+          </div> <!-- /hello-icons -->
+          
         </div>
-      </section> <!-- /screen 1 -->
+      </div>
+    </section> <!-- /screen 1 -->
+    <!-- </div> -->
+    <!-- main -->
+    <main>
+      
 
       <!-- screen 2 -->
       <section id='about'>
@@ -245,7 +247,7 @@
           <h2 class="bl title">Связаться со мной</h2>
           <article class="contacts">
             <!-- TODO: сделать POST -->
-            <form action="index.html" method="GET" class="form">
+            <!-- <form action="index.html" method="GET" class="form">
               <h4 class="mb-20 title" style="text-align: center;">Форма связи</h4>
               <label for="name">
                 <span>Имя</span>
@@ -264,7 +266,43 @@
                 <textarea id='message' type="tel" name="message" rows='4' autocomplete="off" placeholder="Текст сообщения"></textarea>
               </label>
               <button class="btn" type="submit">Связаться</button>
-            </form>
+            </form> -->
+            <div class="wrap">
+              <div class="msg" >Сообщение</div>
+              <form enctype="multipart/form-data" method="post" id="form" ">
+                  <div class="group-input">
+                  <div class="group-text-input">
+                  <div class="input-wrap">
+                      <input name="name" id="name" type="text" required class="form-input aInput" autocomplete="off">
+                      <label for="name" class="input-label">Представьтесь</label>
+                  </div>
+                  <div class="input-wrap">
+                      <input name="tel" id="tel" type="tel" class="form-input aInput" autocomplete="on">
+                      <label for="tel" class="input-label">Ваш номер телефона</label>
+                  </div>
+                  <div class="input-wrap">
+                      <input name="email" id="email" type="text" required class="form-input aInput" autocomplete="on">
+                      <label for="email" class="input-label">Укажите почту</label>
+                  </div>
+                  </div>
+                  <div class="input-wrap">
+                     <textarea name="texta" id="texta" class="aInput"></textarea>
+                      <label for="texta" class="area-label">Сообщение</label>
+                  </div>
+                  </div>
+                  <div class="form__btns">
+                    <div class="file-wrap">
+                      <label for="myfile" class="labelFile">
+                          <img src="https://img.icons8.com/ios/50/000000/upload-to-cloud.png"/>
+                          <p class="count">Прикрепить файлы</p>
+                      </label>
+                      <input type="file" multiple class="inputFile" id="myfile" name="file[]" multiple="multiple" onchange="inputFile(event)"/>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Отправить</button>
+                  </div>
+                  
+              </form>
+              </div>
             <div class="contacts__info">
               <h3 class="title">Контакты</h3>
               <ul>
@@ -285,14 +323,33 @@
 
 
   <script  src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/form.js"></script>
+
   <script type="module" src='./js/swiper.js' ></script>
   <script src="./js/help.js"></script>
   <script>
 
     const elem = document.querySelector('#main');
     const header = document.querySelector('header');
+    // const _parallax = document.querySelector('.parallax');
     elem.addEventListener('mousemove', parallax);
     header.addEventListener('mousemove', parallax);
+
+
+    // _parallax.addEventListener('mousemove', (e) => {
+    //   console.log(window.innerWidth)
+    //   if(window.innerWidth < 800){
+    //     return
+    //   }
+
+    //   setTimeout(() => {
+    //     parallax(e)
+        
+    //   }, 1000 / 60);
+
+
+    // } )
     const c1 = document.querySelector('.hello-icons__circle-1');
     const c2 = document.querySelector('.hello-icons__circle-2');
     const c3 = document.querySelector('.hello-icons__circle-3');
@@ -302,6 +359,11 @@
 
     // Magic happens here
     function parallax(e) {
+      if(window.innerWidth < 800){
+        return
+      }
+
+
       let _w = window.innerWidth / 2;
       let _h = window.innerHeight / 2;
       let _mouseX = e.clientX;
