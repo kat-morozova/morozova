@@ -97,6 +97,10 @@ a,
 li {
 	line-height: 1.5;
 }
+b,
+strong {
+	color: inherit;
+}
 
 // ---------------------
 // HEADER
@@ -196,6 +200,9 @@ li {
 		}
 		&__desc {
 			padding: 10px 10px;
+			p {
+				margin: 10px 0;
+			}
 		}
 
 		&__btns {
@@ -250,6 +257,8 @@ li {
 				height: auto;
 				// transition: all 0.01s;
 				transform: translate(-50%, -50%);
+
+				@include trans;
 			}
 			.hello_icons__book {
 				top: 40%;
@@ -302,10 +311,13 @@ section#about {
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: stretch;
 		justify-content: center;
 		gap: 30px;
 		padding: 15px 0;
+	}
+	&__text {
+		font-weight: 400;
 	}
 
 	&__block {

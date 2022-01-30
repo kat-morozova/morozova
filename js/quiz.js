@@ -17,6 +17,34 @@ const Levels = [
 	},
 ];
 
+const levels2 = [
+	{
+		ratio: 0.85,
+		title: 'Докторантура',
+		desc: 'Ваши аналитические способности говорят о том, что вы доктор наук!',
+	},
+	{
+		ratio: 0.7,
+		title: 'Аспирантура',
+		desc: 'Ваши аналитические способности говорят о том, что у вас высокопрофессиональное образование!',
+	},
+	{
+		ratio: 0.5,
+		title: 'Бакалавриат',
+		desc: 'У вас высшее профессиональное образование',
+	},
+	{
+		ratio: 0.2,
+		title: 'Средняя школа',
+		desc: 'У вас среднее полное образование',
+	},
+	{
+		ratio: 0.0,
+		title: 'Неполное среднее образование',
+		desc: 'Вы окончили 9 классов в средней школе',
+	},
+];
+
 const questions = [
 	{
 		id: 1,
@@ -119,6 +147,296 @@ const questions = [
 			},
 		],
 	},
+	{
+		id: 5,
+		title: 'Сколько будет 2-3*2+2/2+2=?',
+		variants: [
+			{
+				bonus: 0,
+				text: '0',
+			},
+			{
+				bonus: 3,
+				isMax: true,
+				text: '1',
+			},
+			{
+				bonus: 0,
+				text: '2',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 6,
+		title: 'Сколько будет 1/4*2 - 1/4*1=?',
+		variants: [
+			{
+				bonus: 4,
+				isMax: true,
+				text: '0,25',
+			},
+			{
+				bonus: 0,
+				text: '1',
+			},
+			{
+				bonus: 0,
+				text: '0,5',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 7,
+		title:
+			'На встречу пришли 5 человек. Каждый здоровается друг с другом по одному разу. Сколько рукопожатий будет в сумме?',
+		variants: [
+			{
+				bonus: 0,
+				text: '8',
+			},
+			{
+				bonus: 0,
+				text: '9',
+			},
+			{
+				bonus: 5,
+				isMax: true,
+				text: '10',
+			},
+			{
+				bonus: 0,
+				text: '12',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 8,
+		title: 'Какое число должно быть вместо знака вопроса?  1-2-4-9-16-25-36-49-?',
+		variants: [
+			{
+				bonus: 6,
+				isMax: true,
+				text: '64',
+			},
+			{
+				bonus: 0,
+				text: '81',
+			},
+			{
+				bonus: 0,
+				text: '75',
+			},
+
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 9,
+		title:
+			'В наличии есть 5 кубов одного размера. Cколько еще кубов одного размера потребуется для создания одного большого куба?',
+		variants: [
+			{
+				bonus: 0,
+				text: '3',
+			},
+			{
+				bonus: 0,
+				text: '4',
+			},
+			{
+				bonus: 0,
+				text: '11',
+			},
+			{
+				bonus: 7,
+				isMax: true,
+				text: '22',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 10,
+		title: 'Сколько будет 2017*2017 - 2017 - 2016*2017 = ?',
+		variants: [
+			{
+				bonus: 4,
+				isMax: true,
+				text: '0',
+			},
+			{
+				bonus: 0,
+				text: '1',
+			},
+			{
+				bonus: 0,
+				text: '2016',
+			},
+			{
+				bonus: 0,
+				text: '2017',
+			},
+
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 11,
+		title: 'Какое утверждение о числе "Пи" неверное?',
+		variants: [
+			{
+				bonus: 6,
+				isMax: true,
+				text: 'Рациональное число',
+			},
+			{
+				bonus: 0,
+				text: 'Иррациональное число',
+			},
+			{
+				bonus: 0,
+				text: 'Натуральное число',
+			},
+			{
+				bonus: 0,
+				text: 'Положительное число',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 12,
+		title:
+			'Чему равна разность суммы внутренних углов пятиугольника и суммы внутренних углов четырехугольника?',
+		variants: [
+			{
+				bonus: 0,
+				text: '120',
+			},
+			{
+				bonus: 7,
+				isMax: true,
+				text: '180',
+			},
+			{
+				bonus: 0,
+				text: '90',
+			},
+
+			{
+				bonus: 0,
+				text: '270',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 13,
+		title: 'Какое расстояние между точками A(0,0) и B(3,4) в системе координат?',
+		variants: [
+			{
+				bonus: 0,
+				text: '3',
+			},
+
+			{
+				bonus: 0,
+				text: '4',
+			},
+
+			{
+				bonus: 0,
+				text: '12',
+			},
+			{
+				bonus: 5,
+				isMax: true,
+				text: '5',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 14,
+		title: 'Сколько существует двузначных чисел, в записи которых нет цифры 0?',
+		variants: [
+			{
+				bonus: 0,
+				text: '82',
+			},
+
+			{
+				bonus: 0,
+				text: '90',
+			},
+			{
+				bonus: 10,
+				isMax: true,
+				text: '81',
+			},
+			{
+				bonus: 0,
+				text: '80',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
+	{
+		id: 15,
+		title: 'Сколько миллиметров в одном метре?',
+		variants: [
+			{
+				bonus: 0,
+				text: '100',
+			},
+			{
+				bonus: 5,
+				isMax: true,
+				text: '1000',
+			},
+			{
+				bonus: 0,
+				text: '10000',
+			},
+			{
+				bonus: 0,
+				text: 'Не знаю',
+			},
+		],
+	},
 ];
 
 const _quiz = document.querySelector('.quiz');
@@ -192,14 +510,15 @@ function init() {
 	// итоги опроса
 	function end() {
 		const ratio = sumBonus / maxBonus;
-		const lvl = Levels.find((el) => ratio >= el.ratio);
+		const lvl = levels2.find((el) => ratio >= el.ratio);
 
 		console.log('END ratio :', ratio);
 
 		_quiz.innerHTML = `
     <p>Вы набрали ${sumBonus} баллов из ${maxBonus}</p>
     <p>Правильно ${countCorrect} баллов из ${questions.length}</p>
-    <h3>${lvl.title}</h3>
+    <h3 class='title'>${lvl.title}</h3>
+		<h4>${lvl.desc}</h4>
     
     `;
 	}

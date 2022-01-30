@@ -42,8 +42,9 @@
         <ul class="menu">
           <li class='menu__item'><a class="link-in" href="index.html#main">Главная</a></li>
           <li class='menu__item'><a class="link-in" href="index.html#about">О себе</a></li>
-          <li class='menu__item'><a class="link-in" href="resources.html#">Методические материалы</a></li>
           <li class='menu__item'><a class="link-in" href="index.html#contact">Контакты</a></li>
+          <li class='menu__item'><a class="link-in" href="quiz.html#">Тест</a></li>
+          <li class='menu__item'><a class="link-in" href="resources.html#">Методические материалы</a></li>
         </ul>
       </div>
     </header> <!-- </header> -->
@@ -57,7 +58,10 @@
               <h2 class="bl wh fz-l">Екатерина Морозова</h2>
             </div>
             <div class="hello-text__desc">
-              <p class="wh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum excepturi inventore beatae cumque tempora temporibus rerum ut. Labore id vero, dicta enim quibusdam consectetur ipsa! Debitis obcaecati amet natus.</p>
+              <p class="wh">Здесь вы найдете информацию о мне, моих достижениях, и чем мы занимаемся со студентами в свободное время.</p>
+              <p class="wh">В разделе <b>"Методические материалы"</b> вы найдете <b>Программы обучения</b>, <b>КИМы</b>, <b>Методички</b>, <b>Примеры самостоятельных</b> и <b>контрольных работ</b>.</p>
+              <p class="wh">Вы так же можете связаться со мной через <b>форму обратной связи, с легкостью отправить домашнее задание, или просто написать мне с каким-то вопросом.</p>
+              <p class="wh">Если хотите узнать уровень ваших знаний по математике, я подготовила для вас небольшой тест.</p>
             </div>
             <div class="hello-text__btns">
               <a class="btn btn-l btn-secondary" href="index.html#contact">Связваться со мной</a>
@@ -107,10 +111,10 @@
           
 
           <article class="achievements">
-            <h2 class="title mt">Достижения</h2>
+            <h2 class="bl title mb-20 fz-ml">Достижения</h2>
 
             <article>
-              <p>За несколько лет работы я получила большое количество грамот, дипломов, степеней. В <a class="anchor" target="_blank" rel='noreferrer noopener' href='https://cloud.mail.ru/public/BynW/FWiXi61BU'>ссылке</a> ниже доступ ко всему списку грамот. Там так же грамоты моих студентов</p>
+              <p class="fz-m fw-m crop-m">За несколько лет работы я получила большое количество грамот, дипломов, степеней. В <a class="anchor" target="_blank" rel='noreferrer noopener' href='https://cloud.mail.ru/public/BynW/FWiXi61BU'>ссылке</a> ниже доступ ко всему списку грамот. Там так же грамоты моих студентов</p>
               <div class="link-to-cloud">
                 <a class="btn btn-primary center" target="_blank" rel='noreferrer noopener' href="https://cloud.mail.ru/public/BynW/FWiXi61BU"><span >Перейти ко всем грамотам<span></a>
               </div>
@@ -134,7 +138,7 @@
 
             </article>
 
-            <div class="achievements__list">
+            <!-- <div class="achievements__list">
               <div class="achievements__block">
                 <div class="achievements__top">
                   <div class="achievements__circle">
@@ -142,10 +146,10 @@
                   </div>
                 </div>
                 <div class="achievements__text">
-                  <h5 class="wh mb-20">Лучший преподаватель</h5>
-                  <p class="wh">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, delectus!</p>
+                  <h5 class="wh mb-20">Лауреат</h5>
+                  <p class="wh">Несколько раз получала диплом лауреата</p>
                 </div>
-              </div> <!-- /achievements__block -->
+              </div> 
 
               <div class="achievements__block">
                 <div class="achievements__top">
@@ -157,7 +161,7 @@
                   <h5 class="wh mb-20">Лучший преподаватель</h5>
                   <p class="wh">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, delectus!</p>
                 </div>
-              </div> <!-- /achievements__block -->
+              </div> 
 
               <div class="achievements__block">
                 <div class="achievements__top">
@@ -169,8 +173,8 @@
                   <h5 class="wh mb-20">Лучший преподаватель</h5>
                   <p class="wh">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, delectus!</p>
                 </div>
-              </div> <!-- /achievements__block -->
-            </div>
+              </div> 
+            </div> -->
           </article>
 
           
@@ -326,7 +330,7 @@
                       </label>
                       <input type="file" multiple class="inputFile" id="myfile" name="file[]" multiple="multiple" onchange="inputFile(event)"/>
                   </div>
-                  <button type="submit" class="btn btn-primary">Отправить запрос</button>
+                  <button type="submit" class="btn btn-primary">Отправить сообщение</button>
                   </div>
                   
               </form>
@@ -350,20 +354,32 @@
   </div>
 
 
-  <script  src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="./js/gsap.min.js"></script>
   <script src="./js/form.js"></script>
 
-  <script type="module" src='./js/swiper.js' ></script>
+  <script  src='./js/swiper.js' ></script>
   <script src="./js/help.js"></script>
   <script>
 
     const elem = document.querySelector('#main');
     const header = document.querySelector('header');
     // const _parallax = document.querySelector('.parallax');
-    elem.addEventListener('mousemove', parallax);
-    header.addEventListener('mousemove', parallax);
+    elem.addEventListener('mousemove', onMove);
+    header.addEventListener('mousemove', onMove);
 
+
+    function onMove(e) {
+      setTimeout(() => {
+        
+        _w = window.innerWidth / 2;
+        _h = window.innerHeight / 2;
+        _mouseX = e.clientX;
+        _mouseY = e.clientY;
+  
+        parallax(e)
+      }, 33);
+    }
 
     // _parallax.addEventListener('mousemove', (e) => {
     //   console.log(window.innerWidth)
@@ -384,6 +400,14 @@
     const i1 = document.querySelector('.hello_icons__book');
     const i2 = document.querySelector('.hello_icons__ruler');
     const i3 = document.querySelector('.hello_icons__pencil');
+    
+
+    let _w = 0
+    let _h = 0
+    let _mouseX = 0
+    let _mouseY = 0
+
+    window.requestAnimationFrame(parallax);
 
     // Magic happens here
     function parallax(e) {
@@ -392,36 +416,33 @@
       }
 
 
-      let _w = window.innerWidth / 2;
-      let _h = window.innerHeight / 2;
-      let _mouseX = e.clientX;
-      let _mouseY = e.clientY;
+      
       let diff = 0
       let diff2 = -50
-      let _depth1 = {x: `${diff - (_mouseX - _w) * 0.01}%`, y:`${diff - (_mouseY - _h) * 0.01}%`};
-      let _depth2 = {x: `${diff - (_mouseX - _w) * 0.02}%`, y:`${diff - (_mouseY - _h) * 0.02}%`};
-      let _depth3 = {x: `${diff - (_mouseX - _w) * 0.03}%`, y:`${diff - (_mouseY - _h) * 0.03}%`};
+      let _depth1 = {x: `${(diff - (_mouseX - _w) * 0.01).toFixed(0)}%`, y:`${(diff - (_mouseY - _h) * 0.02).toFixed(0)}%`};
+      let _depth2 = {x: `${(diff - (_mouseX - _w) * 0.02).toFixed(0)}%`, y:`${(diff - (_mouseY - _h) * 0.03).toFixed(0)}%`};
+      let _depth3 = {x: `${(diff - (_mouseX - _w) * 0.03).toFixed(0)}%`, y:`${(diff - (_mouseY - _h) * 0.04).toFixed(0)}%`};
       let _depth4 = {
-         x1: `${70 - (_mouseX - _w) * 0.02}%`,
-         y1:`${40 - (_mouseY - _h) * 0.01}%`,
-         x2: `${20 - (_mouseX - _w) * 0.02}%`,
-         y2:`${40 - (_mouseY - _h) * 0.055}%`,
-         x3: `${50 - (_mouseX - _w) * 0.045}%`,
-         y3:`${70 - (_mouseY - _h) * 0.055}%`,
+         x1: `${(diff2 - (_mouseX - _w) * 0.08).toFixed(0)}%`,
+         y1:`${(diff2 - (_mouseY - _h) * 0.08).toFixed(0)}%`,
+        //  x2: `${20 - (_mouseX - _w) * 0.02}%`,
+        //  y2:`${40 - (_mouseY - _h) * 0.055}%`,
+        //  x3: `${50 - (_mouseX - _w) * 0.045}%`,
+        //  y3:`${70 - (_mouseY - _h) * 0.055}%`,
         };
 
       c1.style.transform = `translate(${_depth1.x}, ${_depth1.y})`
       c2.style.transform = `translate(${_depth2.x}, ${_depth2.y})`
       c3.style.transform = `translate(${_depth3.x}, ${_depth3.y})`
-      i1.style.top = _depth4.y1
-      i1.style.left = _depth4.x1
-      i2.style.top = _depth4.y2
-      i2.style.left = _depth4.x2
-      i3.style.top = _depth4.y3
-      i3.style.left = _depth4.x3
-
-
-
+      i1.style.transform = `translate(${_depth4.x1}, ${_depth4.y1})`
+      i2.style.transform = `translate(${_depth4.x1}, ${_depth4.y1})`
+      i3.style.transform = `translate(${_depth4.x1}, ${_depth4.y1})`
+      // i1.style.top = _depth4.y1
+      // i1.style.left = _depth4.x1
+      // i2.style.top = _depth4.y2
+      // i2.style.left = _depth4.x2
+      // i3.style.top = _depth4.y3
+      // i3.style.left = _depth4.x3
 
     }
 

@@ -42,6 +42,11 @@ $color-title: $color-primary;
 .crop-m {
 	width: 80%;
 }
+@media (max-width: 500px) {
+	.crop-m {
+		width: 100%;
+	}
+}
 .unl {
 	text-decoration: underline;
 	cursor: pointer;
@@ -105,9 +110,15 @@ $color-title: $color-primary;
 	align-items: center;
 	border-radius: 50%;
 
+	@include trans;
+
 	background: rgba(255, 255, 255, 0.12);
 	backdrop-filter: blur(1px);
 	box-shadow: 0 3px 12px rgba(55, 55, 100, 0.15), inset 3px 3px 5px rgba(255, 255, 255, 0.12);
+}
+
+@mixin trans {
+	transition: transform 0.8s ease-out;
 }
 
 @mixin glass {
